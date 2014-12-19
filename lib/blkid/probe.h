@@ -813,4 +813,7 @@ _INLINE_ __u64 blkid_swab64(__u64 val)
 
 #undef _INLINE_
 
+unsigned char *blkid_probe_get_buffer(struct blkid_probe *pr,
+			  blkid_loff_t off, size_t len);
+
 #endif /* _BLKID_PROBE_H */
