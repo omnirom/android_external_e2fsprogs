@@ -44,6 +44,7 @@
 #if defined(_WIN32)
 # define HAVE_LINUX_TYPES_H 1
 # define HAVE_WINSOCK_H 1
+# define HAVE_SYS_SYSMACROS_H 1
 #endif
 #if defined(__APPLE__) || defined(__linux__)
 # define HAVE_FCNTL 1
@@ -72,4 +73,5 @@
 # define HAVE_PREAD64 1
 # define HAVE_PWRITE64 1
 # define HAVE_SYS_PRCTL_H 1
+# define HAVE_SYS_SYSMACROS_H 1
 #endif
