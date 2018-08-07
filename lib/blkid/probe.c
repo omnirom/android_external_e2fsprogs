@@ -41,7 +41,7 @@ static int figure_label_len(const unsigned char *label, int len)
 {
 	const unsigned char *end = label + len - 1;
 
-	while ((*end == ' ' || *end == 0) && end >= label)
+	while (end >= label && (*end == ' ' || *end == 0))
 		--end;
 	if (end >= label)
 		return end - label + 1;
@@ -1161,7 +1161,7 @@ static void unicode_16be_to_utf8(unsigned char *str, int out_len,
 }
 
 static void unicode_16le_to_utf8(unsigned char *str, int out_len,
-                                 const unsigned char *buf, int in_len)
+				 const unsigned char *buf, int in_len)
 {
 	int i, j;
 	unsigned int c;
